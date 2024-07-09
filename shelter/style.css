@@ -133,10 +133,15 @@ ul {
     color: var(--color-dark-3xl);
     transition: background-color 0.3s;
     background-color: #fff;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
 }
 
 .button:hover {
-    background: var(--color-primary-light);
+    background-color: var(--color-primary-light);
     cursor: pointer;
     border: none;
     padding: 15px 45px;
@@ -144,13 +149,13 @@ ul {
 
 .button_colorized {
     padding: 15px 45px;
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     border: none;
 }
 
 .button_colorized:hover {
     padding: 15px 45px;
-    background: var(--color-primary-light);
+    background-color: var(--color-primary-light);
     border: none;
 }
 
@@ -280,4 +285,95 @@ ul {
     font-family: var(--second-family);
     line-height: 160%;
     color: var(--color-dark-xl);
+}
+
+/* Our friends */
+.our-friends__container {
+    padding: 80px 40px 100px;
+}
+
+.our-friends {
+    background: var(--color-light-l);
+}
+
+.our-friends__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    gap: 53px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-friends__slider {
+    margin-bottom: 60px;
+}
+
+.slider__arrow {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid var(--color-primary);
+    transition: background-color 0.3s;
+}
+
+.slider__arrow_inactive {
+    border: 2px solid var(--color-dark-s);
+    background-image: url(./assets/icons/arrow-left-inactive.svg);
+}
+
+.slider__arrow:hover {
+    background-color: var(--color-primary-light);
+    border: none;
+}
+
+.slider__arrow-left {
+    display: inline-block;
+    width: 14px;
+    height: 6px;
+    background-image: url(./assets/icons/arrow-left.svg);
+}
+
+.slider__arrow-right {
+    display: inline-block;
+    width: 14px;
+    height: 6px;
+    background-image: url(./assets/icons/arrow-right.svg);
+}
+
+/* Card */
+.cards {
+display: flex;
+gap: 90px;
+}
+
+.card {
+    background-color: var(--color-light-s);
+}
+
+.card__img {
+    margin-bottom: 30px;
+}
+
+.card__title {
+    margin: 0 0 35px 0;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    line-height: 71%;
+    color: var(--color-dark-l);
+}
+
+.card__button {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.our-friends__button {
+    text-align: center;
 }
