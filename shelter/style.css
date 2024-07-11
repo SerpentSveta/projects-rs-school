@@ -252,7 +252,7 @@ ul {
 }
 
 /* About */
-.about__container {
+.about {
     background: var(--color-light-xl);
 }
 
@@ -365,10 +365,18 @@ ul {
 .card {
     background-color: var(--color-light-s);
     border-radius: 9px;
+    transition: all 0.2s ease-in;
 }
 
 .card:hover {
     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.card:hover button {
+    background-color: var(--color-primary-light);
+    cursor: pointer;
+    border: none;
+    padding: 15px 45px;
 }
 
 .card__img {
@@ -470,4 +478,170 @@ ul {
 
 .sleeping-img {
     background-image: url(./assets/icons/icon-sleeping-area.svg);
+}
+
+/* In addition */
+.in-addition {
+    background: var(--color-light-l);
+}
+
+.in-addition__row {
+    padding: 80px 143px 100px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.in-addition__img {
+    margin: 10px 0;
+}
+
+.in-addition__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.in-addition__bank {
+    margin: 0;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+
+.in-addition__credit-card {
+    margin: 0;
+    width: 350px;
+    border-radius: 9px;
+    padding: 10px 15px;
+    background: var(--color-primary);
+}
+
+.number-card {
+    position: relative;
+    padding-left: 45px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+}
+
+.number-card::before {
+    content: url(./assets/icons/credit-card.svg);
+    width: 30px;
+    height: 23px;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.in-addition__information {
+    margin: 0;
+    font-family: var(--second-family);
+    font-style: italic;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--color-dark-m);
+}
+
+/* Footer */
+.footer {
+    background: url("./assets/img/background-shelter.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+.footer__row {
+    padding-top: 40px;
+    display: flex;
+    gap: 161px;
+}
+
+.footer__contacts {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.footer__title {
+    color: var(--color-light-xl);
+}
+
+.footer__email {
+    display: inline-block;
+    position: relative;
+    padding-left: 60px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+}
+
+.footer__email::before {
+    content: url(./assets/icons/icon-email.svg);
+    width: 40px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.footer__tel {
+    padding-top: 5px;
+    padding-left: 60px;
+    display: inline-block;
+    position: relative; 
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+
+}
+
+.footer__tel::before {
+    content: url(./assets/icons/icon-phone.svg);
+    width: 40px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+
+.footer__address {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.footer__street {
+    padding-left: 42px;
+    position: relative;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+}
+
+.footer__street::before {
+    content: url(./assets/icons/icon-marker.svg);
+    width: 22px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+.footer__street-second {
+    padding-top: 4px;
+}
+
+.footer__street-second::before {
+    top: 0;
+}
+
+.footer__img {
+    margin-left: 5px;
 }
