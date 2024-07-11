@@ -409,20 +409,11 @@ ul {
 }
 
 .help__row {
-    margin: 0 87px;
     display: flex;
+    justify-content: center;
     row-gap: 55px;
     column-gap: 119px;
     flex-wrap: wrap;
-}
-
-.help__row_one {
-    margin-bottom: 55px;
-    justify-content: space-between;
-}
-
-.help__row_two {
-    justify-content: center;
 }
 
 .help__item {
