@@ -111,7 +111,8 @@ ul {
 }
 
 .white-background:hover {
-    color: var(--color-dark-3xl);;
+    color: var(--color-dark-3xl);
+    ;
 }
 
 .active {
@@ -159,6 +160,7 @@ ul {
     border: none;
 }
 
+
 .container {
     width: 100%;
     max-width: 1280px;
@@ -170,11 +172,12 @@ ul {
 .logo__link {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
 }
 
 .logo__title {
     margin: 0;
+    padding-top: 1px;
     font-size: 32px;
     font-weight: 400;
     line-height: 110%;
@@ -204,7 +207,7 @@ ul {
 }
 
 .header__nav {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
     padding-right: 2px;
 }
 
@@ -233,8 +236,11 @@ ul {
 }
 
 .our-friends__title {
+    margin-bottom: 58px;
+    padding-top: 1px;
+    padding-left: 2px;
     text-align: center;
-    margin-bottom: 60px;
+
 }
 
 /* Slider */
@@ -261,7 +267,7 @@ ul {
 
 .slider__arrow_inactive {
     border: 2px solid var(--color-dark-s);
-    background-image: url(./assets/icons/arrow-left-inactive.svg);
+    background-image: url(../assets/icons/arrow-left-inactive.svg);
 }
 
 .slider__arrow:hover {
@@ -276,7 +282,7 @@ ul {
     display: inline-block;
     width: 14px;
     height: 6px;
-    background-image: url(./assets/icons/arrow-left.svg);
+    background-image: url(../assets/icons/arrow-left.svg);
     background-repeat: no-repeat;
 }
 
@@ -315,7 +321,7 @@ ul {
 }
 
 .card__img {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     border-radius: 9px 9px 0 0;
 }
 
@@ -336,6 +342,37 @@ ul {
 
 .our-friends__button {
     text-align: center;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.paginator {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-dark-3xl);
+}
+
+.navigation_inactive {
+    border: 2px solid var(--color-dark-s);
+    pointer-events: none;
+    cursor: default;
+}
+
+.navigation_active {
+    background: var(--color-primary);
+}
+
+.paginator_inactive {
+    color: var(--color-dark-s);
 }
 
 /* Footer */
@@ -384,7 +421,7 @@ ul {
     padding-top: 5px;
     padding-left: 60px;
     display: inline-block;
-    position: relative; 
+    position: relative;
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 0.06em;
