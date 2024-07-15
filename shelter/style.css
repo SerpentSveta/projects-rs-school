@@ -321,6 +321,7 @@ ul {
     height: 52px;
     border-radius: 100px;
     border: 2px solid var(--color-primary);
+    background: var(--color-light-l);
     transition: background-color 0.3s;
 }
 

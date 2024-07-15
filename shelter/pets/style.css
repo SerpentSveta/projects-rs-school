@@ -75,7 +75,7 @@ body {
     padding: 0;
     font-size: 15px;
     font-family: var(--font-family);
-    color: var(--color-dark-l);
+    color: var(--color-light-l);
     font-weight: 400;
     /* background: url(https://im0-tub-kz.yandex.net/i?id=989a846708cb140a2493643d20e8abaf-l&n=13);
     background-size: 0; */
@@ -262,6 +262,7 @@ ul {
     height: 52px;
     border-radius: 100px;
     border: 2px solid var(--color-primary);
+    background: var(--color-light-l);
     transition: background-color 0.3s;
 }
 
