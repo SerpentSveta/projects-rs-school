@@ -332,12 +332,12 @@ ul {
 .slider__arrow_inactive {
     border: 2px solid var(--color-dark-s);
     background-image: url(./assets/icons/arrow-left-inactive.svg);
-    cursor: pointer;
 }
 
 .slider__arrow:hover {
     background-color: var(--color-primary-light);
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .slider__arrow-left {
