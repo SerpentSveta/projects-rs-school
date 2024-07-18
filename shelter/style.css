@@ -334,6 +334,7 @@ ul {
 .slider__arrow:hover {
     background-color: var(--color-primary-light);
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .slider__arrow-left {
@@ -373,6 +374,7 @@ ul {
 .card:hover {
     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
     background-color: var(--color-light-xl);
+    cursor: pointer;
 }
 
 .card:hover button {
