@@ -332,6 +332,7 @@ ul {
 .slider__arrow_inactive {
     border: 2px solid var(--color-dark-s);
     background-image: url(./assets/icons/arrow-left-inactive.svg);
+    cursor: pointer;
 }
 
 .slider__arrow:hover {
@@ -376,6 +377,7 @@ ul {
 .card:hover {
     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
     background-color: var(--color-light-xl);
+    cursor: pointer;
 }
 
 .card:hover button {
