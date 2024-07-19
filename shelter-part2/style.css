@@ -77,8 +77,6 @@ body {
     font-family: var(--font-family);
     color: var(--color-dark-l);
     font-weight: 400;
-    /* background: url(https://im0-tub-kz.yandex.net/i?id=989a846708cb140a2493643d20e8abaf-l&n=13);
-    background-size: 0; */
 }
 
 img {
@@ -330,13 +328,16 @@ ul {
 /* Slider */
 .slider {
     display: flex;
-    gap: 53px;
     justify-content: space-between;
     align-items: center;
 }
 
 .our-friends__slider {
     margin-bottom: 60px;
+}
+
+.our-friends__slider-480 {
+    display: none;
 }
 
 .slider__arrow {
@@ -388,6 +389,7 @@ ul {
 }
 
 .card {
+    flex-shrink: 0;
     background-color: var(--color-light-s);
     border-radius: 9px;
     transition: all 0.2s ease-in;
@@ -518,7 +520,9 @@ ul {
 }
 
 .in-addition__img {
+    background-image: url(./assets/img/donation-dog.png);
     margin: 10px 0;
+    object-fit: contain;
 }
 
 .in-addition__content {
@@ -674,6 +678,12 @@ ul {
     object-fit: contain;
 }
 
+@media (max-width: 1240px) {
+    .cards {
+        gap: 50px;
+    }
+}
+
 @media (max-width: 1180px) {
     .about__row {
         padding: 80px 139px 100px;
@@ -692,6 +702,10 @@ ul {
     .about__img {
         margin: 0 auto;
         order: 3;
+    }
+
+    .cards {
+        gap: 30px;
     }
 }
 
@@ -718,8 +732,13 @@ ul {
     }
 }
 
+@media (max-width: 1100px) {
+    .cards {
+        gap: 20px;
+    }
+}
 
-@media (max-width: 1050px) {
+@media (max-width: 1070px) {
     .slider {
         gap: 12px;
     }
@@ -795,6 +814,12 @@ ul {
     }
 }
 
+@media (max-width: 800px) {
+    .our-friends__card__center {
+        display: none;
+    }
+}
+
 @media (max-width: 769px) {
     .hero__content {
         max-width: 460px;
@@ -823,9 +848,60 @@ ul {
     }
 }
 
+@media (max-width: 550px) {
+    .in-addition__container {
+        padding: 42px 10px;
+    }
+
+    .in-addition__row {
+        padding: 0;
+    }
+
+    .in-addition__img {
+        width: 400px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+}
+
 @media (max-width: 500px) {
     .about__row {
         padding: 80px 25px 100px;
+    }
+
+    .help__container {
+        padding: 42px 15px;
+    }
+
+    .help__item {
+        width: 130px;
+    }
+
+    .help__row {
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .help__description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-friends__slider {
+        display: none;
+    }
+
+    .our-friends__slider-480 {
+        margin-bottom: 42px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .arrow-wrapper-480 {
+        display: flex;
+        gap: 80px;
     }
 }
 
@@ -834,7 +910,17 @@ ul {
         padding: 0 20px;
     }
 
+    .hero__content {
+        max-width: 300px;
+    }
+
     .hero__title {
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+
+    .title-h3 {
         font-size: 25px;
         text-align: center;
     }
@@ -843,4 +929,145 @@ ul {
         margin-top: 105px;
         width: 260px;
     }
+
+    .about__row {
+        padding: 42px 5px 42px;
+        gap: 42px;
+    }
+
+    .about__img {
+        width: 260px;
+    }
+
+    .our-friends__container {
+        padding: 0;
+        padding-bottom: 42px;
+    }
+
+    .our-friends__title {
+        padding-top: 42px;
+        margin-bottom: 42px;
+    }
+
+    .help__container {
+        padding: 42px 15px;
+    }
+
+    .in-addition__container {
+        padding: 42px 10px;
+    }
+
+    .in-addition__row {
+        gap: 42px;
+    }
+
+    .in-addition__bank {
+        text-align: center;
+    }
+
+    .in-addition__credit-card {
+        margin: 0 auto;
+        width: 281px;
+    }
+
+    .number-card {
+        font-size: 15px;
+    }
+
+    .number-card::before {
+        top: -3px;
+    }
+
+    .in-addition__information {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: justify;
+    }
+
+    .footer__row {
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header__container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo__link {
+        gap: 9px;
+        padding-top: 1px;
+    }
+
+    .header__icon {
+        padding: 2px 0 0 0;
+        gap: 8px;
+    }
+
+    .hero__text {
+        text-align: center;
+        padding-bottom: 41px;
+    }
+
+    .about__row {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 40px;
+        text-align: justify;
+    }
+
+    .button_colorized {
+        padding: 15px 44px;
+    }
+
+    .help__title {
+        margin-bottom: 38px;
+    }
+
+    .help__img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .help__row {
+        padding-left: 5px;
+        column-gap: 30px;
+        row-gap: 27px;
+    }
+
+    .in-addition__container {
+        padding: 40px 10px;
+    }
+
+    .in-addition__row {
+        gap: 0;
+    }
+
+    .in-addition__content {
+        width: 300px;
+        gap: 23px;
+    }
+
+    .in-addition__bank {
+        letter-spacing: 0;
+    }
+
+    .in-addition__credit-card {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .in-addition__img {
+        margin-top: -23px;
+        width: 260px;
+    }
+
 }
