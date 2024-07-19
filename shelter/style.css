@@ -583,6 +583,11 @@ ul {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: var(--color-primary);
+    transition: all 0.5s;
+}
+
+.footer__email:hover {
+    color: var(--color-light-s);
 }
 
 .footer__email::before {
@@ -593,6 +598,11 @@ ul {
     position: absolute;
     left: 0;
     top: -5px;
+    transition: all 0.5s;
+}
+
+.footer__email:hover::before {
+    filter: opacity(25%);
 }
 
 .footer__tel {
@@ -604,7 +614,11 @@ ul {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: var(--color-primary);
+    transition: all 0.5s;
+}
 
+.footer__tel:hover {
+    color: var(--color-light-s);
 }
 
 .footer__tel::before {
@@ -615,6 +629,11 @@ ul {
     position: absolute;
     left: 0;
     top: 0px;
+    transition: all 0.5s;
+}
+
+.footer__tel:hover::before {
+    filter: opacity(25%);
 }
 
 .footer__address {
@@ -622,6 +641,10 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 33px;
+}
+
+.footer__address:hover {
+    color: var(--color-light-s);
 }
 
 .footer__street {
@@ -633,6 +656,10 @@ ul {
     color: var(--color-primary);
 }
 
+.footer__street:hover {
+    color: var(--color-light-s);
+}
+
 .footer__street::before {
     content: url(./assets/icons/icon-marker.svg);
     width: 22px;
@@ -641,6 +668,11 @@ ul {
     position: absolute;
     left: 0;
     top: 6px;
+    transition: all 0.5s;
+}
+
+.footer__street:hover::before {
+    filter: opacity(25%);
 }
 
 .footer__street-second {
