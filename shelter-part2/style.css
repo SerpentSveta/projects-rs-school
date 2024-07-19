@@ -206,6 +206,27 @@ ul {
     padding-right: 2px;
 }
 
+.header__btn {
+    display: none;
+    padding: 0;
+    border: 0;
+}
+
+.header__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
 .nav__list {
     display: flex;
     gap: 35px;
@@ -236,7 +257,6 @@ ul {
 .hero__title {
     margin: 0;
     padding-bottom: 42px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 44px;
     font-weight: 400;
     line-height: 130%;
@@ -778,5 +798,49 @@ ul {
 @media (max-width: 769px) {
     .hero__content {
         max-width: 460px;
+    }
+}
+
+@media (max-width: 750px) {
+    .header__btn {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    .about__row {
+        padding: 80px 100px 100px;
+    }
+}
+
+@media (max-width: 580px) {
+    .about__row {
+        padding: 80px 50px 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about__row {
+        padding: 80px 25px 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero__title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .hero__img {
+        margin-top: 105px;
+        width: 260px;
     }
 }
