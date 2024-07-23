@@ -156,11 +156,11 @@ ul {
 }
 
 @media (hover: hover) {
-.button_colorized:hover {
-    padding: 15px 45px;
-    background-color: var(--color-primary-light);
-    border: none;
-}
+    .button_colorized:hover {
+        padding: 15px 45px;
+        background-color: var(--color-primary-light);
+        border: none;
+    }
 }
 
 .container {
@@ -362,10 +362,10 @@ ul {
 }
 
 @media (hover: hover) {
-.slider__arrow:hover {
-    background-color: var(--color-primary-light);
-    border: 2px solid transparent;
-}
+    .slider__arrow:hover {
+        background-color: var(--color-primary-light);
+        border: 2px solid transparent;
+    }
 }
 
 .slider__arrow-left {
@@ -404,18 +404,18 @@ ul {
 }
 
 @media (hover: hover) {
-.card:hover {
-    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-}
+    .card:hover {
+        box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
 }
 
 @media (hover: hover) {
-.card:hover button {
-    background-color: var(--color-primary-light);
-    cursor: pointer;
-    border: none;
-    padding: 15px 45px;
-}
+    .card:hover button {
+        background-color: var(--color-primary-light);
+        cursor: pointer;
+        border: none;
+        padding: 15px 45px;
+    }
 }
 
 .card__img {
@@ -1021,7 +1021,7 @@ ul {
 
     .in-addition__credit-card {
         margin: 0 auto;
-        width: 281px;
+        width: 282px;
     }
 
     .number-card {
