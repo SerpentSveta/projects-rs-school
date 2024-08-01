@@ -876,7 +876,7 @@ ul {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
     .header__btn {
         display: block;
     }
@@ -1040,6 +1040,11 @@ ul {
 
     .footer__row {
         row-gap: 40px;
+    }
+
+    .footer__img {
+        width: 260px;
+        height: 269px;
     }
 }
 
