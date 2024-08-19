@@ -906,7 +906,7 @@ ul {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767.5px) {
 
     .header__btn {
         display: block;
@@ -941,7 +941,6 @@ ul {
         visibility: hidden;
         transition: transform 0.5s, visibility 0.5s;
         /* z-index: 200; */
-        
     }
 
     .header.open .header__nav {
