@@ -675,7 +675,7 @@ ul {
         position: absolute;
         right: -350px;
         top: 0;
-        padding: 249px 20px 30px;
+        padding: 0 20px 30px;
         height: 100vh;
         background: var(--color-light-l);
         visibility: hidden;
@@ -691,7 +691,7 @@ ul {
 
     .nav__list {
         display: block;
-        margin: 0;
+        margin: auto;
     }
 
     .nav__item {
@@ -706,6 +706,10 @@ ul {
         display: block;
         margin-bottom: 40px;
         text-align: center;
+    }
+
+    .nav__item:last-child a {
+        margin-bottom: 0;
     }
 }
 
