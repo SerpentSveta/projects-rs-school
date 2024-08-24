@@ -62,6 +62,8 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    /* Чтобы не было скачка, когда я убираю скрол для попапа */
+    scrollbar-gutter: stable;
 }
 
 *,
@@ -77,6 +79,7 @@ body {
     font-family: var(--font-family);
     color: var(--color-dark-l);
     font-weight: 400;
+    scrollbar-gutter: stable;
 }
 
 .body-wrapper {
@@ -86,15 +89,6 @@ body {
 }
 
 .shading {
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 99;
-    background: rgba(41, 41, 41, 0.6); */
     position: relative;
     height: 100vh;
 }
@@ -107,6 +101,10 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(41, 41, 41, 0.6);
+}
+
+.scroll-block {
+    overflow: hidden;
 }
 
 img {
@@ -389,6 +387,133 @@ ul {
 .slider__arrow_inactive {
     border: 2px solid var(--color-dark-s);
     background-image: url(./assets/icons/arrow-left-inactive.svg);
+}
+
+/* Modal */
+.pop-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(41, 41, 41, 0.6);
+    overflow-y: auto;
+    opacity: 1;
+    transition: visibility 0.5s, opacity 0.5s;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pop-up__window {
+    display: flex;
+    flex-direction: column;
+    width: 952px;
+    background-color: transparent;
+    transform: scale(1);
+    transition: transform 0.7s;
+}
+
+.hidden .pop-up__window {
+    transform: scale(0);
+}
+
+.pop_up__button__wrapper {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.pop_up__button {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid var(--color-primary);
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.pop_up__close {
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(./assets/icons/icon-close.svg);
+    background-repeat: no-repeat;
+}
+
+@media (hover: hover) {
+    .pop_up__button:hover {
+        background-color: var(--color-primary-light);
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+}
+
+.pop-up__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 29px;
+    width: 900px;
+    background-color: var(--color-light-s);
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    border-radius: 9px;
+}
+
+.pop-up__img {
+    width: 500px;
+}
+
+.pop-up__description {
+    display: flex;
+    flex-direction: column;
+    width: 371px;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.pop-up__title {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.pop-up__type {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000;
+}
+
+.pop-up__text {
+    margin: 0;
+    margin-bottom: 40px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000;
+}
+
+.pop-up__list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.pop-up__item {
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000;
 }
 
 @media (hover: hover) {
