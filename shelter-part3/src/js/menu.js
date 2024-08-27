@@ -1,7 +1,6 @@
 const header = document.querySelector('.header');
 const bodyWrapper = document.querySelector('.body-wrapper');
 
-document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('burger-btn').addEventListener('click', function () {
         header.classList.toggle('open');
 
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             bodyWrapper.classList.remove('shading');
         }
     })
-})
+
 
 window.onload = function () {
     addLinkMenuClickHandler();
@@ -36,8 +35,10 @@ const closeMobileMenu = () => {
 }
 
 bodyWrapper.addEventListener('click', function () {
-    header.classList.toggle('open');
-    bodyWrapper.classList.remove('shading');
+    if (header.classList.contains('open')) {
+      header.classList.remove('open');
+      bodyWrapper.classList.remove('shading');
+    }
 })
 
 bodyWrapper.querySelector('header').addEventListener('click', function (e) {
