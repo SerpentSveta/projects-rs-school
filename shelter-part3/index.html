@@ -99,7 +99,7 @@
                                 <h4 class="card__title">Jennifer</h4>
                                 <div class="card__button"><button class="button" type="button">Learn more</button></div>
                             </div>
-                            <div class="card our-friends__card card__last">
+                            <div class="card our-friends__card card__last" data-modal-card="pop-up-3">
                                 <img class="card__img" src="./assets/img/pets-woody.png" alt="Pet Woody">
                                 <h4 class="card__title">Woody</h4>
                                 <div class="card__button"><button class="button" type="button">Learn more</button></div>
@@ -109,7 +109,7 @@
                                     class=" slider__arrow-right"></span></button></div>
                     </div>
                     <div class="slider our-friends__slider-480">
-                        <div class="cards our-friends__cards">
+                        <div class="cards our-friends__cards" data-modal-card="pop-up-5">
                             <div class="card our-friends__card">
                                 <img class="card__img" src="./assets/img/pets-katrine.png" alt="Pet Katrine">
                                 <h4 class="card__title">Katrine</h4>
@@ -130,91 +130,6 @@
                     <div class="our-friends__button"><a class="button button_colorized" href="./pets/index.html">Get to
                             know
                             the rest</a>
-                    </div>
-                </div>
-                <div class="pop-up hidden" data-modal id="pop-up-1">
-                    <div class="pop-up__window">
-                        <div class="pop_up__button__wrapper" data-popup-close>
-                            <button class="pop_up__button" type="button">
-                                <span class="pop_up__close"></span>
-                            </button>
-                        </div>
-                        <div class="pop-up__content">
-                            <div class="pop-up__img"><img src="./assets/img-modal/jennifer.png" alt="Dog Jennifer"
-                                    width="500" height="500"></div>
-                            <div class="pop-up__description">
-                                <h3 class="title-h3 pop-up__title" data-name="name">Jennifer</h3>
-                                <p class="pop-up__type" data-type="type">Dog — Labrador</p>
-                                <p class="pop-up__text">Jennifer is a sweet 2 months old Labrador that is patiently
-                                    waiting to find a new forever home. This girl really enjoys
-                                    being able to go outside to run and play, but won’t hesitate to play up a storm
-                                    in the house if she has all of her
-                                    favorite toys.</p>
-                                <ul class="pop-up__list">
-                                    <li class="pop-up__item"><b>Age:</b> 2 months</li>
-                                    <li class="pop-up__item"><b>Inoculations:</b> none</li>
-                                    <li class="pop-up__item"><b>Diseases:</b> none</li>
-                                    <li class="pop-up__item"><b>Parasites:</b> none</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pop-up hidden" data-modal id="pop-up-2">
-                    <div class="pop-up__window">
-                        <div class="pop_up__button__wrapper" data-popup-close>
-                            <button class="pop_up__button" type="button">
-                                <span class="pop_up__close"></span>
-                            </button>
-                        </div>
-                        <div class="pop-up__content">
-                            <div class="pop-up__img"><img src="./assets/img-modal/sophia.png" alt="Dog Sophia"
-                                    width="500" height="500"></div>
-                            <div class="pop-up__description">
-                                <h3 class="title-h3 pop-up__title" data-name="name">Sophia</h3>
-                                <p class="pop-up__type" data-type="type">Dog — Shih tzu</p>
-                                <p class="pop-up__text">Sophia here and I'm looking for my forever home to live out the
-                                    best years of my life. I am full of energy. Everyday I'm
-                                    learning new things, like how to walk on a leash, go potty outside, bark and play
-                                    with toys and I still need some
-                                    practice.</p>
-                                <ul class="pop-up__list">
-                                    <li class="pop-up__item"><b>Age:</b> 1 month</li>
-                                    <li class="pop-up__item"><b>Inoculations:</b> parvovirus</li>
-                                    <li class="pop-up__item"><b>Diseases:</b> none</li>
-                                    <li class="pop-up__item"><b>Parasites:</b> none</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pop-up hidden" data-modal id="pop-up-5">
-                    <div class="pop-up__window">
-                        <div class="pop_up__button__wrapper" data-popup-close>
-                            <button class="pop_up__button" type="button">
-                                <span class="pop_up__close"></span>
-                            </button>
-                        </div>
-                        <div class="pop-up__content">
-                            <div class="pop-up__img"><img src="./assets/img-modal/katrine.png" alt="Dog Katrine"
-                                    width="500" height="500">
-                            </div>
-                            <div class="pop-up__description">
-                                <h3 class="title-h3 pop-up__title" data-name="name">Katrine</h3>
-                                <p class="pop-up__type" data-type="type">Cat — British Shorthair</p>
-                                <p class="pop-up__text">Katrine is a beautiful girl. She is as soft as the finest velvet
-                                    with a thick lush fur. Will love you until the last
-                                    breath she takes as long as you are the one. She is picky about her affection. She
-                                    loves cuddles and to stretch into
-                                    your hands for a deeper relaxations.</p>
-                                <ul class="pop-up__list">
-                                    <li class="pop-up__item"><b>Age:</b> 6 months</li>
-                                    <li class="pop-up__item"><b>Inoculations:</b> panleukopenia</li>
-                                    <li class="pop-up__item"><b>Diseases:</b> none</li>
-                                    <li class="pop-up__item"><b>Parasites:</b> none</li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -302,6 +217,237 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-1">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/jennifer.png" alt="Dog Jennifer" width="500"
+                        height="500"></div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Jennifer</h3>
+                    <p class="pop-up__type" data-type="type">Dog — Labrador</p>
+                    <p class="pop-up__text">Jennifer is a sweet 2 months old Labrador that is patiently
+                        waiting to find a new forever home. This girl really enjoys
+                        being able to go outside to run and play, but won’t hesitate to play up a storm
+                        in the house if she has all of her
+                        favorite toys.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 2 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> none</li>
+                        <li class="pop-up__item"><b>Diseases:</b> none</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-2">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/sophia.png" alt="Dog Sophia" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Sophia</h3>
+                    <p class="pop-up__type" data-type="type">Dog — Shih tzu</p>
+                    <p class="pop-up__text">Sophia here and I'm looking for my forever home to live out the
+                        best years of my life. I am full of energy. Everyday I'm
+                        learning new things, like how to walk on a leash, go potty outside, bark and play
+                        with toys and I still need some
+                        practice.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 1 month</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> parvovirus</li>
+                        <li class="pop-up__item"><b>Diseases:</b> none</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-3">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/woody.png" alt="Dog Woody" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Woody</h3>
+                    <p class="pop-up__type" data-type="type">Dog — Golden Retriever</p>
+                    <p class="pop-up__text">Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and
+                        is a smart pup. Since he is on the stronger
+                        side, he will learn a lot from your training. Woody will be happier when he finds a new family
+                        that can spend a lot of
+                        time with him.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 3 years 6 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> adenovirus, distemper</li>
+                        <li class="pop-up__item"><b>Diseases:</b> right back leg mobility reduced</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-4">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/scarlett.png" alt="Dog Scarlett" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Scarlett</h3>
+                    <p class="pop-up__type" data-type="type">Dog — Jack Russell Terrier</p>
+                    <p class="pop-up__text">Scarlett is a happy, playful girl who will make you laugh and smile. She
+                        forms a bond quickly and will make a loyal
+                        companion and a wonderful family dog or a good companion for a single individual too since she
+                        likes to hang out and be
+                        with her human.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 3 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> parainfluenza</li>
+                        <li class="pop-up__item"><b>Diseases:</b> none</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-5">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/katrine.png" alt="Dog Katrine" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Katrine</h3>
+                    <p class="pop-up__type" data-type="type">Cat — British Shorthair</p>
+                    <p class="pop-up__text">Katrine is a beautiful girl. She is as soft as the finest velvet
+                        with a thick lush fur. Will love you until the last
+                        breath she takes as long as you are the one. She is picky about her affection. She
+                        loves cuddles and to stretch into
+                        your hands for a deeper relaxations.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 6 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> panleukopenia</li>
+                        <li class="pop-up__item"><b>Diseases:</b> none</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-6">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/timmy.png" alt="Cat Timmy" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Timmy</h3>
+                    <p class="pop-up__type" data-type="type">Cat — British Shorthair</p>
+                    <p class="pop-up__text">Timmy is an adorable grey british shorthair male. He loves to play and
+                        snuggle. He is neutered and up to date on age
+                        appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and
+                        wants a person to share his
+                        thoughts with.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 2 years 3 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> calicivirus, viral rhinotracheitis</li>
+                        <li class="pop-up__item"><b>Diseases:</b> kidney stones</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-7">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/freddie.png" alt="Cat Freddie" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Freddie</h3>
+                    <p class="pop-up__type" data-type="type">Cat — British Shorthair</p>
+                    <p class="pop-up__text">Freddie is a little shy at first, but very sweet when he warms up. He likes
+                        playing with shoe strings and bottle caps.
+                        He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in
+                        his life, and is looking
+                        to find his forever home.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 2 months</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> rabies</li>
+                        <li class="pop-up__item"><b>Diseases:</b> none</li>
+                        <li class="pop-up__item"><b>Parasites:</b> none</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up hidden" data-modal id="pop-up-8">
+        <div class="pop-up__window">
+            <div class="pop_up__button__wrapper" data-popup-close>
+                <button class="pop_up__button" type="button">
+                    <span class="pop_up__close"></span>
+                </button>
+            </div>
+            <div class="pop-up__content">
+                <div class="pop-up__img"><img class="pop-up__img" src="./assets/img-modal/charly.png" alt="Dog Charly" width="500"
+                        height="500">
+                </div>
+                <div class="pop-up__description">
+                    <h3 class="title-h3 pop-up__title" data-name="name">Charly</h3>
+                    <p class="pop-up__type" data-type="type">Dog — Jack Russell Terrier</p>
+                    <p class="pop-up__text">This cute boy, Charly, is three years old and he likes adults and kids. He
+                        isn’t fond of many other dogs, so he might do
+                        best in a single dog home. Charly has lots of energy, and loves to run and play. We think a
+                        fenced yard would make him
+                        very happy.</p>
+                    <ul class="pop-up__list">
+                        <li class="pop-up__item"><b>Age:</b> 8 years</li>
+                        <li class="pop-up__item"><b>Inoculations:</b> bordetella bronchiseptica, leptospirosis</li>
+                        <li class="pop-up__item"><b>Diseases:</b> deafness, blindness</li>
+                        <li class="pop-up__item"><b>Parasites:</b> lice, fleas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- <script src="./src/js/index.js"></script> -->
     <script src="./src/js/menu.js"></script>
