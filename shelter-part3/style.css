@@ -389,6 +389,49 @@ ul {
     background-image: url(./assets/icons/arrow-left-inactive.svg);
 }
 
+.slider__wrapper {
+    width: 990px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.slider__content {
+    display: flex;
+    gap: 90px;
+    position: relative;
+    left: -1080px;
+}
+
+@keyframes move-right {
+    from {
+        left: -990px;
+    }
+
+    to {
+        left: -2160px;
+    }
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 3s;
+}
+
+@keyframes move-left {
+    from {
+        left: -990px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 3s;
+}
+
 /* Modal */
 .pop-up {
     display: flex;
@@ -561,10 +604,11 @@ ul {
 }
 
 .card {
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     background-color: var(--color-light-s);
     border-radius: 9px;
     transition: all 0.2s ease-in;
+    width: 270px;
 }
 
 @media (hover: hover) {
