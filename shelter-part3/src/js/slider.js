@@ -105,6 +105,7 @@ const buttonRight = document.querySelector('#button-right');
 const cardsLeft = document.querySelector('#cards_left');
 const cardsActive = document.querySelector('#cards_active');
 const cardsRight = document.querySelector('#cards_right');
+const cardsAll = document.querySelectorAll('.card');
 
 
 // Функция для перемешивания массива
@@ -129,18 +130,18 @@ const generateCards = (shuffledData) => {
 
 const renderCards = () => {
     generateCards(petsInfo).forEach((card, index) => {
-        if (index < 3) {
-            cardsLeft.append(card.generateCard());
-        } else if (index > 3 && index < 6) {
-            cardsActive.append(card.generateCard());
+        if (index > 3 && index < 6) {
+        cardsActive.append(card.generateCard());
         } else {
             cardsRight.append(card.generateCard());
+            cardsLeft.append(card.generateCard());
         }
     })
 }
 
 renderCards();
 
+console.log(cardsAll);
 // const allCards = Array.from(document.querySelectorAll(".our-friends__card"));
 
 // function addRandomCard(cards) {

@@ -99,6 +99,8 @@ const petsInfo = [
     }
 ]
 
+const pageCardsLayout = {};
+
 const slider = document.querySelector('.slider');
 const navigation = document.querySelector('.navigation');
 const arrowWrapper = document.querySelectorAll('.arrow-wrapper');
@@ -107,7 +109,6 @@ const buttonLeftAll = arrowWrapper[0];
 const buttonRightAll = arrowWrapper[4];
 const buttonLeft = arrowWrapper[1];
 const buttonRight = arrowWrapper[3];
-const buttonPage = arrowWrapper[2];
 
 const numberPage = document.querySelector('.page');
 
@@ -199,18 +200,27 @@ window.addEventListener('resize', handleResize);
 
 // screenChange();
 
+
+
+// Функция для отображения карточек
 function showCards() {
     slider.innerHTML = '';
 
     const start = currentPage * cardsOnPage;
     const end = start + cardsOnPage;
 
-    const sliceArrayPets = bigPetsInfo.slice(start, end);
-    const shuffledSliceArrayPets = shuffle(sliceArrayPets);
+    // Проверяем, есть ли уже сохраненные карточки для текущей страницы
+    if (!pageCardsLayout[currentPage]) {
+        const sliceArrayPets = bigPetsInfo.slice(start, end);
+        const shuffledSliceArrayPets = shuffle(sliceArrayPets);
 
-    shuffledSliceArrayPets.forEach((card) => {
+        // Сохраняем перемешанные карточки в объект
+        pageCardsLayout[currentPage] = shuffledSliceArrayPets;
+    }
+
+    pageCardsLayout[currentPage].forEach((card) => {
         slider.append(card.generateCard());
-    })
+    });
 };
 
 showCards();
