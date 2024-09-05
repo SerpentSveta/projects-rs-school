@@ -97,79 +97,33 @@ const petsInfo = [
     }
 ]
 
-// function createPopUp(petValue, index) {
-//     const popUp = document.createElement('div');
-//     popUp.classList.add = ('pop-up', 'hidden');
-//     popUp.id = `pop-up-${index + 1}`;
-//     popUp.setAttribute('data-modal', '');
-
-//     const popUpWindow = document.createElement('div');
-//     popUp.classList.add = ('pop-up__window');
-//     popUp.appendChild(popUpWindow);
-
-//     const popUpButtonWrapper = document.createElement('div');
-//     popUpButtonWrapper.classList.add = ('pop_up__button__wrapper');
-//     popUp.setAttribute('data-popup-close', '');
-//     popUpWindow.appendChild(popUpButtonWrapper);
-
-//     const popUpButton = document.createElement('button');
-//     popUpButton.classList.add = ('pop_up__button');
-//     popUpButtonWrapper.appendChild(popUpButton);
-
-//     const popUpClose = document.createElement('span');
-//     popUpClose.classList.add = ('pop_up__close');
-//     popUpButton.appendChild(popUpClose);
-
-//     const popUpContent = document.createElement('div');
-//     popUpContent.classList.add = ('pop-up__content');
-//     popUpWindow.appendChild(popUpContent);
-
-//     const popUpImg = document.createElement('div');
-//     popUpImg.classList.add = ('pop-up__img');
-//     popUpContent.appendChild(popUpImg);
-
-//     const imgPet = document.createElement('img');
-//     imgPet.src = petValue.img;
-//     imgPet.setAttribute('width', '500');
-//     imgPet.setAttribute('height', '500');
-//     popUpImg.appendChild(imgPet);
-
-//     const popUpDescription = document.createElement('div');
-//     popUpDescription.classList.add = ('pop-up__description');
-//     popUpButtonWrapper.appendChild(popUpDescription);
-
-//     const title = document.createElement('h3');
-//     title.classList.add = ('title-h3', 'pop-up__title');
-//     title.textContent = petValue.name;
-//     popUpDescription.appendChild(title);
-
-//     const popUpType = document.createElement('p');
-//     popUpType.classList.add = 'pop-up__type';
-//     popUpType.textContent = `${petValue.type} - ${petValue.breed}`;
-//     popUpDescription.appendChild(popUpType);
-
-
-//     return popUp;
-// }
-
-// petsInfo.forEach((item, index) => {
-//     const popUp = createPopUp(item, index);
-//     document.body.appendChild(popUp);
-// });
-
 const dataModalCards = document.querySelectorAll('[data-modal-card]');
 const popupCloseButtons = document.querySelectorAll('[data-popup-close]');
 const popups = document.querySelectorAll('[data-modal]');
 const popUpWindows = document.querySelectorAll('.pop-up__window');
+const sliderContent = document.querySelector('.slider__content');
 
-dataModalCards.forEach(function (card) {
-    card.addEventListener('click', function () {
-        const modalCardId = this.dataset.modalCard;
-        const popUpId = document.querySelector('#' + modalCardId);
-        popUpId.classList.remove('hidden');
-        document.body.classList.add('scroll-block');
+sliderContent.addEventListener('click', function () {
+    if (event.target.closest('[data-modal-card]')) {
+            const card = event.target.closest('[data-modal-card]');
+            const modalCardId = card.dataset.modalCard;
+            const popUpId = document.querySelector('#' + modalCardId);
+            if (popUpId) {
+                popUpId.classList.remove('hidden');
+                document.body.classList.add('scroll-block');
+            }
+        }
     })
-})
+
+
+// dataModalCards.forEach(function (card) {
+//     card.addEventListener('click', function () {
+//         const modalCardId = this.dataset.modalCard;
+//         const popUpId = document.querySelector('#' + modalCardId);
+//         popUpId.classList.remove('hidden');
+//         document.body.classList.add('scroll-block');
+//     })
+// })
 
 popupCloseButtons.forEach(function (button) {
     button.addEventListener('click', function () {

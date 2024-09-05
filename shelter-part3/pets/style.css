@@ -356,9 +356,11 @@ ul {
 }
 
 .card {
+    /* flex-shrink: 0; */
     background-color: var(--color-light-s);
     border-radius: 9px;
     transition: all 0.2s ease-in;
+    width: 270px;
 }
 
 .card:hover {
@@ -407,7 +409,7 @@ ul {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
-    line-height: 115%;
+    line-height: 100%;
     letter-spacing: 0.06em;
     text-align: center;
     color: var(--color-dark-3xl);
@@ -419,13 +421,17 @@ ul {
     cursor: default;
 }
 
+.navigation_inactive span {
+    color: var(--color-dark-s);
+}
+
 .navigation_active {
     background: var(--color-primary);
 }
 
-.paginator_inactive {
+/* .paginator_inactive {
     color: var(--color-dark-s);
-}
+} */
 
 /* Modal */
 .pop-up {
@@ -961,9 +967,9 @@ ul {
         row-gap: 40px;
     }
 
-     .pop-up__img {
+    .pop-up__img {
         display: none;
-     }
+    }
 }
 
 @media (max-width: 320px) {
