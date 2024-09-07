@@ -226,7 +226,6 @@ function showCards() {
 showCards();
 
 buttonRight.addEventListener('click', function () {
-    // Проверяем, не достигли ли мы последней страницы
     if ((currentPage + 1) * cardsOnPage < bigPetsInfo.length) {
         currentPage++;
 

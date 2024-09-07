@@ -105,7 +105,6 @@ const buttonRight = document.querySelector('#button-right');
 const cardsLeft = document.querySelector('#cards_left');
 const cardsActive = document.querySelector('#cards_active');
 const cardsRight = document.querySelector('#cards_right');
-const cardsAll = document.querySelectorAll('.card');
 
 
 // Функция для перемешивания массива
@@ -116,89 +115,124 @@ function shuffle(array) {
     }
     return array;
 }
+let leftClick = 0;
+let rightClick = 0;
 
 // Render Cards
 const shuffledData = shuffle(petsInfo);
+shuffledData.push(shuffledData[4]);
 
-const generateCards = (shuffledData) => {
+const generateCards = (data) => {
     const cards = [];
-    shuffledData.forEach(card => {
+    data.forEach(card => {
         cards.push(new Card(card))
-    })
+    });
     return cards;
 }
 
-const renderCards = () => {
-    generateCards(petsInfo).forEach((card, index) => {
-        if (index > 3 && index < 6) {
-        cardsActive.append(card.generateCard());
-        } else {
-            cardsRight.append(card.generateCard());
-            cardsLeft.append(card.generateCard());
-        }
-    })
+let cardsVisible = 3;
+
+const mql = window.matchMedia("(max-width: 1220px)");
+const mqlSmall = window.matchMedia("(max-width: 767px)");
+
+const clearCards = () => {
+    cardsLeft.innerHTML = '';
+    cardsActive.innerHTML = '';
+    cardsRight.innerHTML = '';
 }
 
-renderCards();
+const renderCards = () => {
+    clearCards(); // без нее карточки перестраиваются только после обновления страницы
+    generateCards(shuffledData).forEach((card, index) => {
+        if (index < cardsVisible) {
+            cardsLeft.append(card.generateCard());
+        }
 
-console.log(cardsAll);
-// const allCards = Array.from(document.querySelectorAll(".our-friends__card"));
+        if (index >= cardsVisible && index < (cardsVisible * 2)) {
+            cardsActive.append(card.generateCard());
+        }
 
-// function addRandomCard(cards) {
-//     const randomIndex = Math.floor(Math.random() * cards.length);
-// }
+        if (index >= (cardsVisible * 2) && index < (cardsVisible * 3)) {
+            cardsRight.append(card.generateCard());
+        }
+    });
+}
 
-// allCards.append(allCards[randomIndex]);
+function screenChange() {
+    if (mqlSmall.matches) {
+        cardsVisible = 1;
+    } else if (mql.matches) {
+        cardsVisible = 2;
+    }
+    else {
+        cardsVisible = 3;
+    }
+
+    renderCards();
+}
+
+mql.addEventListener("change", screenChange);
+mqlSmall.addEventListener("change", screenChange);
+
+screenChange();
 
 
-// let cardsLeft = allCards.slice(0, 3);
-// console.log(cardsLeft);
+buttonLeft.addEventListener('click', (event) => {
 
-// let cardsActive = allCards.slice(3, 6);
-// console.log(cardsActive);
+    if (mqlSmall.matches) {
+        sliderContent.classList.add('transition-left-small');
+    } else if (mql.matches) {
+        sliderContent.classList.add('transition-left-medium');
+    } else {
+        sliderContent.classList.add('transition-left');
+    }
 
-// 
-
-// let cardsRight = [...allCards.slice(-2), cardsLeft[randomIndex]];
-// 
-
-// let cardsLeft = allCards.slice();
-
-
-
-// let cardsActive = cardsLeft.splice(3, 3);
-// console.log(cardsActive);
-
-// let cardsRight = cardsLeft.slice();
-// console.log(cardsRight);
-
-buttonLeft.addEventListener('click', () => {
-    sliderContent.classList.add('transition-left');
 })
 
-buttonRight.addEventListener('click', () => {
-    sliderContent.classList.add('transition-right');
+buttonRight.addEventListener('click', (event) => {
+
+    if (mqlSmall.matches) {
+        sliderContent.classList.add('transition-right-small');
+    } else if (mql.matches) {
+        sliderContent.classList.add('transition-right-medium');
+    } else {
+        sliderContent.classList.add('transition-right');
+    }
+
 })
-
-
 
 sliderContent.addEventListener('animationend', (event) => {
+    event.preventDefault()
+
     let cardsHelp;
 
-    if (event.animationName === "move-left") {
-        sliderContent.classList.remove('transition-left');
+    if (event.animationName === "move-left" || event.animationName === "move-left-medium" || event.animationName === "move-left-small") {
+        if (mqlSmall.matches) {
+            sliderContent.classList.remove('transition-left-small');
+        } else if (mql.matches) {
+            sliderContent.classList.remove('transition-left-medium');
+        } else {
+            sliderContent.classList.remove('transition-left');
+        }
 
         cardsHelp = cardsActive.innerHTML;
         cardsActive.innerHTML = cardsLeft.innerHTML;
         cardsLeft.innerHTML = cardsRight.innerHTML;
         cardsRight.innerHTML = cardsHelp;
 
-
     } else {
-        sliderContent.classList.remove('transition-right');
+        if (mqlSmall.matches) {
+            sliderContent.classList.remove('transition-right-small');
+        } else if (mql.matches) {
+            sliderContent.classList.remove('transition-right-medium');
+        } else {
+            sliderContent.classList.remove('transition-right');
+        }
+
         cardsHelp = cardsActive.innerHTML;
         cardsActive.innerHTML = cardsRight.innerHTML;
         cardsRight.innerHTML = cardsLeft.innerHTML;
         cardsLeft.innerHTML = cardsHelp;
     }
-})
+});
+

@@ -103,7 +103,7 @@ const popups = document.querySelectorAll('[data-modal]');
 const popUpWindows = document.querySelectorAll('.pop-up__window');
 const sliderContent = document.querySelector('.slider__content');
 
-sliderContent.addEventListener('click', function () {
+sliderContent.addEventListener('click', function (event) {
     if (event.target.closest('[data-modal-card]')) {
             const card = event.target.closest('[data-modal-card]');
             const modalCardId = card.dataset.modalCard;

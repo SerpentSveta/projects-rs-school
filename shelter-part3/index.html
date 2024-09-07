@@ -7,6 +7,11 @@
     <title>Cozy House</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.svg">
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
 </head>
 
 <body>
@@ -89,10 +94,10 @@
                         </div>
                         <div class="slider__wrapper">
                             <div class="slider__content">
-                                 <div class="cards our-friends__cards" id="cards_left"></div>
+                                <div class="cards our-friends__cards" id="cards_left"></div>
                                 <div class="cards our-friends__cards" id="cards_active"></div>
                                 <div class="cards our-friends__cards" id="cards_right"></div>
-                                  <!--  <div class="card our-friends__card" data-modal-card="pop-up-1">
+                                <!--  <div class="card our-friends__card" data-modal-card="pop-up-1">
                                         <img class="card__img" src="./assets/img/pets-jennifer.png" alt="Pet Jennifer">
                                         <h4 class="card__title">Jennifer</h4>
                                         <div class="card__button">
@@ -508,9 +513,9 @@
         </div>
     </div>
     <!-- <script src="./src/js/index.js"></script> -->
-    <script type="module" src="./src/js/menu.js"></script>
-    <script type="module" src="./src/js/slider.js"></script>
-    <script type="module" src="./src/js/modal.js"></script>
+    <script type="module" src="./src/js/menu.js" defer></script>
+    <script type="module" src="./src/js/slider.js" defer></script>
+    <script type="module" src="./src/js/modal.js" defer></script>
 </body>
 
 </html>
