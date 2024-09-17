@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pleer__wrapper {
+    background: center / contain no-repeat url("./assets/img/cover-1.jpg");
+    background-size: 100% auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1__title {
+    display: none;
+}
+
+.pleer {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    outline: 5px solid #9a031e;
+
+    outline: 5px ridge #c1121f;
+    border-radius: 9px;
+}
+
+.pleer__img .cover {
+    display: block;
+    max-width: 100%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.pleer__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #fb8b24;
+    padding: 20px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.title__artist {
+
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+}
+
+.title__song {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.pleer__progress-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 10px;
+    background-color: #c1121f;
+    border-radius: 9px;
+}
+
+.btn {
+    filter: invert(100%);
+    text-align: center;
+}
+
+.btn img {
+    width: 70%;
+}
+
+.pleer__controls {
+    display: flex;
+    justify-content: space-between;
+}
