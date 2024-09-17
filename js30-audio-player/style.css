@@ -20,17 +20,21 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    position: relative;
 }
 
 .pleer__wrapper {
-    background: center / contain no-repeat url("./assets/img/cover-1.jpg");
-    background-size: 100% auto;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.cover-1 {
+    background: center / contain no-repeat url("./assets/img/cover1.jpg");
+    background-size: 100% auto;
 }
 
 .h1__title {
@@ -43,8 +47,6 @@ body {
     margin: 0 auto;
     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
     outline: 5px solid #9a031e;
-
-    outline: 5px ridge #c1121f;
     border-radius: 9px;
 }
 
@@ -67,7 +69,6 @@ body {
 }
 
 .title__artist {
-
     margin: 0;
     margin-bottom: 10px;
     font-size: 26px;
@@ -111,4 +112,33 @@ body {
 .pleer__controls {
     display: flex;
     justify-content: space-between;
+}
+
+.footer {
+    max-width: 1024px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-info {
+    font-size: 20px;
+    color: #dbdfdd;
+}
+
+.footer-info a {
+    color: #dbdfdd;
+}
+
+.footer__img {
+    width: 50px;
+    height: 100%;
+    display: block;
 }
