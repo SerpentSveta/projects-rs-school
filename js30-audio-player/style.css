@@ -184,6 +184,10 @@ input[type=range]::-webkit-slider-thumb {
     transform: scale(1.1);
 }
 
+.btn img:active {
+    transform: rotate(180deg);
+}
+
 .pleer__controls {
     display: flex;
     justify-content: space-between;
