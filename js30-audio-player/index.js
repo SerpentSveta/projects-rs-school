@@ -30,6 +30,7 @@ function convertTime(time) {
 pleerAudio.onloadedmetadata = function () {
     audioDuration.innerHTML = convertTime(pleerAudio.duration);
     audioCurrentTime.innerHTML = convertTime(pleerAudio.currentTime);
+    progressBar.value = 0;
 }
 
 // текущая песня
@@ -67,7 +68,6 @@ btnPlay.addEventListener('click', function () {
         isPlay = false;
         cover.classList.remove('cover-scale');
     }
-    
 })
 
 const nextAudio = () => {
