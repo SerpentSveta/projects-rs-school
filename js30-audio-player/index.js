@@ -60,11 +60,14 @@ btnPlay.addEventListener('click', function () {
         playAudio();
         imgChanged.src = `assets/btn/pause.png`;
         isPlay = true;
+        cover.classList.add('cover-scale');
     } else {
         pauseAudio();
         imgChanged.src = `assets/btn/play.png`;
         isPlay = false;
+        cover.classList.remove('cover-scale');
     }
+    
 })
 
 const nextAudio = () => {
@@ -78,6 +81,7 @@ const nextAudio = () => {
     playAudio();
     isPlay = true;
     imgChanged.src = `assets/btn/pause.png`;
+    cover.classList.add('cover-scale');
 }
 
 const prevAudio = () => {
@@ -91,6 +95,7 @@ const prevAudio = () => {
     playAudio();
     isPlay = true;
     imgChanged.src = `assets/btn/pause.png`;
+    cover.classList.add('cover-scale');
 }
 
 btnNext.addEventListener('click', nextAudio);
