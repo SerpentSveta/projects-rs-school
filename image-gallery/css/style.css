@@ -41,3 +41,9 @@ body {
 .bg-dark {
     background-color: white;
 }
+
+.footer__img {
+    width: 50px;
+    height: 100%;
+    display: block;
+}

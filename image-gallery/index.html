@@ -14,16 +14,16 @@
 
 <body>
     <div class="container">
-    <header class="header">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand">Navbar</a>
+        <header class="header">
+            <nav class="navbar navbar-light bg-light shadow">
+                <a class="navbar-brand">Image Gallery</a>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav>
-    </header>
-    <section class="gallery">
+        </header>
+        <section class="gallery">
 
             <!-- Сложите колонки на мобильном устройстве, сделав одну полную, а другую половинную -->
             <div class="row">
@@ -43,14 +43,16 @@
                 <div class="col-6">.col-6</div>
                 <div class="col-6">.col-6</div>
             </div>
-
-    </section>
-    <footer class="footer">
-        <div class="footer-info">2024 <a href="https://github.com/serpentsveta" target="_blank">SerpentSveta</a></div>
-        <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="footer__img"
-                src="./assets/img/logo-rss.svg" alt="Логотип RS School"></a>
-    </footer>
+            <div class="errors"></div>
+        </section>
+        <footer class="footer">
+            <div class="footer-info">2024 <a href="https://github.com/serpentsveta" target="_blank">SerpentSveta</a>
+            </div>
+            <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="footer__img"
+                    src="./img/logo-rss.svg" alt="Логотип RS School"></a>
+        </footer>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
