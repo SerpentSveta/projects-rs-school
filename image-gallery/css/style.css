@@ -42,8 +42,26 @@ body {
     background-color: white;
 }
 
-.gallery-img {
+.gallery__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery__img {
     width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.horizontal {
+    grid-column: span 1;
+}
+
+.vertical {
+    grid-column: span 1;
+    grid-row: span 2;
 }
 
 .footer__img {
