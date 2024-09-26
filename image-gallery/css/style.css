@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,9 +19,18 @@ body {
     margin: 0;
     padding: 0;
     align-items: center;
-    font-family: "Roboto", serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #CCE3DE;
+}
+
+.bg-light {
+background-color: #6B9080;
+}
+
+.header {
+    padding-bottom: 10px;
 }
 
 .container {
