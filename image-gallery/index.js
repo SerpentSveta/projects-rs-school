@@ -4,6 +4,9 @@ const errors = document.querySelector('.errors');
 const galleryContainer = document.querySelector('.gallery__container');
 const modalBody = document.querySelector('.modal-body');
 const form = document.querySelector('.form-inline');
+const column1 = document.querySelector('.column-1');
+const column2 = document.querySelector('.column-2');
+const column3 = document.querySelector('.column-3');
 
 const apiUrl = "https://api.unsplash.com/photos/?client_id=CVaahuYwRuXc5bwgyNnK6d5bRpvBjn-IH51-sSIGaqs&per_page=15";
 const searchUrl = "https://api.unsplash.com/search/photos/?client_id=CVaahuYwRuXc5bwgyNnK6d5bRpvBjn-IH51-sSIGaqs&per_page=15&query=";
@@ -15,7 +18,7 @@ async function getData(apiUrl) {
     try {
         const res = await fetch(apiUrl);
         const data = await res.json();
-
+        console.log(data);
         imagesURL = [];
 
         const imageArray = data.results ? data.results : data;
@@ -42,7 +45,9 @@ window.onload = () => {
 
 // Показ изображений
 const showData = () => {
-    galleryContainer.innerHTML = '';
+    column1.innerHTML = '';
+    column2.innerHTML = '';
+    column3.innerHTML = '';
 
     if (imagesURL.length === 0) {
         errors.innerHTML = `Try again later`;
@@ -73,7 +78,15 @@ const createImg = () => {
             modalBody.appendChild(imgBig);
         });
 
-        galleryContainer.appendChild(img);
+        if (index % 3 === 0) {
+            column1.appendChild(img);
+        } else if (index % 3 === 1) {
+            column2.appendChild(img);
+        } else {
+            column3.appendChild(img);
+        }
+
+        // galleryContainer.appendChild(img);
     });
 }
 
