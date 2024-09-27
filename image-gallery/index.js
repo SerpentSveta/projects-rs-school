@@ -7,6 +7,8 @@ const form = document.querySelector('.form-inline');
 const column1 = document.querySelector('.column-1');
 const column2 = document.querySelector('.column-2');
 const column3 = document.querySelector('.column-3');
+const searchClose = document.querySelector('.search-close');
+
 
 const apiUrl = "https://api.unsplash.com/photos/?client_id=CVaahuYwRuXc5bwgyNnK6d5bRpvBjn-IH51-sSIGaqs&per_page=15";
 const searchUrl = "https://api.unsplash.com/search/photos/?client_id=CVaahuYwRuXc5bwgyNnK6d5bRpvBjn-IH51-sSIGaqs&per_page=15&query=";
@@ -96,9 +98,16 @@ form.addEventListener('submit', (event) => {
 
     if (search.value.trim()) {
         const searchUrlSent = `${searchUrl}${search.value.trim()}`;
-        getData(searchUrlSent); 
-
-        search.value = '';
+        getData(searchUrlSent);
     }
 });
+
+search.addEventListener('input', () => {
+    searchClose.classList.remove('hidden');
+})
+
+searchClose.addEventListener('click', () => {
+    search.value = '';
+    searchClose.classList.add('hidden');
+})
 

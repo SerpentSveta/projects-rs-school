@@ -92,6 +92,22 @@ body {
     transform: scale(0.95);
 }
 
+.hidden {
+    display: none;
+}
+
+.search-close {
+    cursor: pointer;
+    top: 20px;
+    right: 107px;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+/* .img__search {
+    cursor: pointer;
+} */
+
 .footer {
     background-color: #003049;
 }
