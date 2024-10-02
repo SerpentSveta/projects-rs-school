@@ -41,7 +41,9 @@ body {
 }
 
 .card {
-    /* width: 150px; */
+    width: 150px;
+    height: 200px;
+    position: relative;
     border-radius: 9px;
     transition: all 0.2s ease-in;
 }
@@ -54,6 +56,37 @@ body {
 
 .card__img {
     width: 100%;
+    height: 100%;
     border-radius: 9px;
     object-fit: cover;
+    position: absolute;
+}
+
+.footer {
+    max-width: 1024px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-info {
+    font-size: 20px;
+    color: #dbdfdd;
+}
+
+.footer-info a {
+    color: #dbdfdd;
+}
+
+.footer__img {
+    width: 50px;
+    height: 100%;
+    display: block;
 }
