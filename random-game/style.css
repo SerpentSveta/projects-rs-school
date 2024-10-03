@@ -34,18 +34,33 @@ body {
     margin: 0 auto;
     padding: 40px 15px;
     display: grid;
-    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-columns: repeat(4, minmax(auto, 150px));
     gap: 10px;
     justify-content: center;
     align-items: center;
+    perspective: 1000px;
 }
 
 .card {
-    width: 150px;
+    width: 100%;
     height: 200px;
     position: relative;
     border-radius: 9px;
     transition: all 0.2s ease-in;
+    transform-style: preserve-3d;
+}
+
+.card:active {
+    transform: scale(0.9);
+    transition: all 0.3s ease-in;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.flip {
+    transform: rotateY(180deg);
 }
 
 @media (hover: hover) {
@@ -56,10 +71,15 @@ body {
 
 .card__img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3 / 4;
     border-radius: 9px;
     object-fit: cover;
     position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-cover {
+    transform: rotateY(180deg);    
 }
 
 .footer {
