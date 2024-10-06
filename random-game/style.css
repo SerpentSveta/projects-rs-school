@@ -14,7 +14,7 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -28,13 +28,19 @@ body {
     background-color: #d8572a;
 }
 
-.game {
+.game__wrapper {
     max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.game {
     width: 100%;
     margin: 0 auto;
     padding: 40px 15px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(auto, 150px));
+    grid-template-columns: repeat(4, minmax(auto, 100px));
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -43,7 +49,7 @@ body {
 
 .card {
     width: 100%;
-    height: 200px;
+    height: 150px;
     position: relative;
     border-radius: 9px;
     transition: all 0.2s ease-in;
@@ -79,11 +85,80 @@ body {
 }
 
 .front-cover {
-    transform: rotateY(180deg);    
+    transform: rotateY(180deg);
 }
 
+.game__level {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.level__title {
+    font-size: 25px;
+    color: #780116;
+}
+
+.imput__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.input__text {
+    font-size: 18px;
+    color: #780116;
+    padding: 5px;
+}
+
+.custom-radio {
+padding-bottom: 5px;
+}
+
+.custom-radio input[type="radio"] {
+    appearance: none;
+    /* Скрываем стандартную радиокнопку */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.custom-radio input[type="radio"]:checked {
+    border-color: #780116;
+    /* Меняем цвет границы при выборе */
+}
+
+.custom-radio input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #780116;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* Начальный размер - 0 */
+    transition: transform 0.2s ease-in-out;
+    /* Анимация */
+}
+
+.custom-radio input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+    /* Увеличиваем кружок при выборе */
+}
+
+.custom-radio label {
+    cursor: pointer;
+}
+
+
 .footer {
-    max-width: 1024px;
+    max-width: 1200px;
     width: 100%;
     padding: 20px;
     display: flex;
