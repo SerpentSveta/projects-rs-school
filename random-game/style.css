@@ -88,21 +88,45 @@ body {
     transform: rotateY(180deg);
 }
 
+.game__description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .game__level, .game__count {
     display: flex;
     gap: 20px;
     align-items: center;
     border-bottom: 1px solid #780116;
+    padding-bottom: 10px;
+}
+
+.total__count {
+    border-bottom: 1px solid #780116;
+    padding-bottom: 10px;
 }
 
 .level__title,
-.count__title {
+.count__title, .total__title {
     font-size: 25px;
     color: #780116;
 }
 
 .count__score {
     font-size: 25px;
+    color: #780116;
+}
+
+.total__title {
+margin-bottom: 10px;
+}
+
+.total__score {
+    display: flex;
+    gap: 10px;
     color: #780116;
 }
 
