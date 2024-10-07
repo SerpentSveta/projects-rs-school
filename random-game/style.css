@@ -88,13 +88,20 @@ body {
     transform: rotateY(180deg);
 }
 
-.game__level {
+.game__level, .game__count {
     display: flex;
     gap: 20px;
     align-items: center;
+    border-bottom: 1px solid #780116;
 }
 
-.level__title {
+.level__title,
+.count__title {
+    font-size: 25px;
+    color: #780116;
+}
+
+.count__score {
     font-size: 25px;
     color: #780116;
 }
@@ -112,7 +119,7 @@ body {
 }
 
 .custom-radio {
-padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .custom-radio input[type="radio"] {

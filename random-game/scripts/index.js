@@ -6,6 +6,11 @@ const game = document.querySelector('.game');
 let cardsCount;
 let arrayCovers = [];
 const cardsArray = [];
+let clickCount = 0;
+
+let countScore = document.querySelector('.count__score');
+countScore.innerHTML = 0;
+
 
 // Определяю cardsCount
 const level = document.getElementsByName('level');
@@ -89,7 +94,7 @@ const checkEndGame = () => {
     const matchedCards = cardsArray.filter(card => !card.classList.contains('flip'));
     if (matchedCards.length === 0) {
         playAudio();
-        alert('Win!')
+        alert(`Win! Your score ${ clickCount };`)
         setTimeout(() => {
             cardsArray.forEach(card => {
                 card.classList.remove('flip');
@@ -105,6 +110,10 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
+
+    clickCount++;
+    countScore.innerHTML = clickCount;
+
     if (!openCard) {
         openCard = true;
         firstCard = this;
