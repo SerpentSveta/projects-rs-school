@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
+    <title>Audio-player</title>
+</head>
+
+<body>
+    <div class="pleer__wrapper cover1">
+        <section class="pleer">
+            <h1 class="h1__title">Audio-player</h1>
+            <div class="pleer__img"><img class="cover" src="./assets/img/cover1.jpg" alt="Track cover"></div>
+            <div class="pleer__description">
+                <div class="pleer__title">
+                    <p class="title__artist">Imagine Dragons</p>
+                    <p class="title__song">Wrecked</p>
+                    <audio class="pleer__audio" src="./assets/audio/audio1.mp3"></audio>
+                </div>
+                <div class="progress-bar-wrapper">
+                <input type="range" min="1" max="100" value="0" class="progress-bar">
+                <div class="pleer__progress-bar">
+                    <div class="audio-current-time"> </div>
+                    <div class="audio-duration"> </div>
+                </div>
+                </div>
+                <div class="pleer__controls">
+                    <div class="btn prev"><img src="./assets/btn/backward.png" alt="previous song"></div>
+                    <div class="btn play"><img class="img__play" src="./assets/btn/play.png" alt="play song"></div>
+                    <div class="btn next"><img src="./assets/btn/forward.png" alt="next song"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-info">2024 <a href="https://github.com/serpentsveta" target="_blank">SerpentSveta</a></div>
+        <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="footer__img"
+                src="./assets/img/logo-rss.svg" alt="Логотип RS School"></a>
+    </footer>
+<script src="./index.js"></script>
+</body>
+
+</html>
