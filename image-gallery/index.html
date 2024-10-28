@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container-lg">
+        <header class="header">
+            <nav class="navbar navbar-light bg-light shadow">
+                <a class="navbar-brand">
+                    <img src="./img/icon-foto.svg" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Image Gallery</a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn-close search-close hidden" type="button"> </button>
+                    <button class="btn btn-outline-light my-2 my-sm-0 search focus-ring" type="submit">Search</button>
+                </form>
+            </nav>
+        </header>
+        <section class="gallery">
+            <div class="gallery__container">
+                <div class="column-1"></div>
+                <div class="column-2"></div>
+                <div class="column-3"></div>
+            </div>
+            <div class="errors"></div>
+            <!-- Модальное окно -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        <!-- <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Закрыть"></button>
+                        </div> -->
+                        <div class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-info">2024 <a href="https://github.com/serpentsveta" target="_blank">SerpentSveta</a>
+            </div>
+            <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="footer__img"
+                    src="./img/logo-rss.svg" alt="Логотип RS School"></a>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
