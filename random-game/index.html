@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <div class="game__wrapper">
+        <section class="game__description">
+            <div class="game__level">
+                <p class="level__title">Level</p>
+                <div class="imput__wrapper">
+                    <label class="custom-radio">
+                        <input type="radio" name="level" value="light">
+                        <span class="input__text">light</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="level" value="medium" checked>
+                        <span class="input__text">medium</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="level" value="hard">
+                        <span class="input__text">hard</span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="game__count">
+                <p class="count__title">Score</p>
+                <p class="count__score"> </p>
+            </div>
+            <div class="total__count">
+                <p class="total__title">Total score</p>
+                <div class="total__results"></div>
+                <!-- <div class="total__score">
+                <div class="play__count">Game 1</div>
+                <div class="play__score">25</div>
+                </div> -->
+            </div>
+        </section>
+        <section class="game">
+            <audio class="audio" src="./win.mp3"></audio>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-info">2024 <a href="https://github.com/serpentsveta" target="_blank">SerpentSveta</a></div>
+        <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="footer__img"
+                src="./icons/logo-rss.svg" alt="Логотип RS School"></a>
+    </footer>
+    <script type="module" src="./scripts/index.js" defer></script>
+</body>
+
+</html>
